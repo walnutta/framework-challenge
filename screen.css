@@ -267,7 +267,7 @@ body::before {
     background-size: contain;
     transform: translate(-50%, -50%) rotate(-18deg);
     opacity: 0.25;               /* increased for visibility */
-    filter: blur(25px) brightness(1.2);
+    filter: blur(15px) brightness(1.2);
     z-index: -1;
     pointer-events: none;
     animation: dnaDrift 30s ease-in-out infinite alternate;
@@ -285,3 +285,13 @@ body::before {
   }
 }
 
+.btn-primary {
+  background-color: #90f23a;  /* your lime-green accent */
+  border-color: #90f23a;
+  color: #091540; /* darker text for contrast */
+}
+
+.btn-primary:hover {
+  background-color: #79e030; /* darker on hover */
+  border-color: #79e030;
+}
