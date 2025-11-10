@@ -1,18 +1,21 @@
-/* Base */
 html, body {
     height: 100%;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
 }
-
-
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #fbfff8;
+    /* Gradient from light green to dark green/blue */
+    background: linear-gradient(180deg, #f5f7f4 0%, #65b5ad8d 100%);
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-size: cover;       
+    color: #f0f0f0;              
 }
+
 
 /* NAVBAR */
 nav {
@@ -21,18 +24,19 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: #fbfff8;
+    background: #f5f7f4;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    color:#091540
+    color: #79cf2e;
 }
 .nav-links {
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .nav-links a {
@@ -56,6 +60,7 @@ nav {
     color: inherit;
 }
 
+
 main 
 {
     flex: 1;
@@ -68,8 +73,11 @@ h1 {
     font-weight: 900;
     margin-bottom: 1rem;
     text-align: left;
-    color: #091540;
+    color: #79cf2e;
+    font-family: 'Bebas Neue', sans-serif;
 }
+
+
 section {
     margin-bottom: 2.55rem;
 }
@@ -117,8 +125,8 @@ aside.card:hover {
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    background-color: #f4ffeab8;
-    color: #091540;
+    background-color: #ffffffdf;
+    color: #212529;
 }
 
 button {
@@ -182,9 +190,10 @@ footer
     align-self: flex-end;
 }
 
-h2 {
-    color: #122360;
+h2, h3, h4, h5, h6 {
+    color: #79cf2e;
     font-weight: 700;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .tag {
@@ -267,3 +276,4 @@ body::before {
     transform: translate(-50%, -50%) rotate(-18deg) scale(1);
   }
 }
+
