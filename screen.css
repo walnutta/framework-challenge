@@ -1,4 +1,266 @@
-/* Add screen styles below */
-a.active {
+/* Base */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fbfff8;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fbfff8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: inherit;  
+    padding: 0 1.5rem;
+}
+.nav-links a:visited {
+    color: inherit; 
+}
+
+.brand {
     font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+main 
+{
+    flex: 1;
+    padding: 2rem 2rem;
+    font-family:  'Montserrat', sans-serif;
+    padding-top: 80px;  /* space for fixed navbar */
+}
+h1 {
+    font-size: 2.75rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-align: left;
+    color: #091540;
+}
+section {
+    margin-bottom: 2.55rem;
+}
+
+.ctas {
+    margin: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.split {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.card{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+    flex: 1 1 280px;      /* grow, shrink, minimum width */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+aside.card {
+    background-color: #fbfff8;
+}
+aside.card:hover {
+    transform: none;
+    background-color: inherit;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #f4ffeab8;
+    color: #091540;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 7px;  /* fully rounded corners */
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: #007bff;  /* bright bootstrap-like blue */
+  color: white;               /* readable text */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;  /* darker blue on hover */
+  transform: translateY(-2px); /* slight lift on hover */
+}
+
+form.small-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem; 
+  max-width:300px;
+}
+
+form.small-form button {
+  align-self: center;
+  max-width: 150px;
+  margin-bottom: 1rem
+}
+
+form.small-form label {
+  font-weight: 600;
+}
+
+form.small-form input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer 
+{
+    background: #f8f9fa;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #ddd;
+    font-family:  'Montserrat', sans-serif;
+    text-align: center;
+}
+.pill 
+{
+    color: #EB6424;
+    align-self: flex-end;
+}
+
+h2 {
+    color: #122360;
+    font-weight: 700;
+}
+
+.tag {
+     font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #333;
+}
+
+main, footer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When page loaded, animate into place */
+body.loaded main,
+body.loaded footer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+body.loaded .tag {
+  animation: typing 2s steps(40, end) forwards, blink 0.7s step-end infinite alternate;
+}
+
+@keyframes typing {
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-inner {
+    margin-top: 2rem;
+    padding: 4rem 2rem; /* more top/bottom space */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background DNA graphic */
+body::before {
+    transform: var(--dna-transform, translate(-50%, -50%) rotate(-15deg));
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 140vw; 
+    height: 220vh;
+    background: url("gene.svg") no-repeat center;
+    background-size: contain;
+    transform: translate(-50%, -50%) rotate(-18deg);
+    opacity: 0.55;               /* increased for visibility */
+    filter: blur(25px) brightness(1.2);
+    z-index: -1;
+    pointer-events: none;
+    animation: dnaDrift 30s ease-in-out infinite alternate;
+}
+
+@keyframes dnaDrift {
+  0% {
+    transform: translate(-50%, -50%) rotate(-18deg) scale(1);
+  }
+  50% {
+    transform: translate(-52%, -48%) rotate(-14deg) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-18deg) scale(1);
+  }
 }

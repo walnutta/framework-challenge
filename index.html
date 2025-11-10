@@ -3,17 +3,137 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>CloneLab — Safe, automated cloning workflows</title>
+    <meta
+      name="description"
+      content="CloneLab provides secure, automated cloning protocols and collaborative workspaces for labs and education."
+    >
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="screen.css">
+
+    
   </head>
+
   <body>
-    <h1>Home</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
+    <header>
+      <!-- <div class="container" role="banner"> -->
+        <nav aria-label="Main navigation">
+          <a href="index.html" class="brand" aria-current="page">
+              CloneLab
+            </a>
+          <div class="nav-links" role="navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="#how">How it works</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      <!-- </div> -->
+    </header>
+
+    <main class="container" id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-inner">
+          <p class="pill" aria-hidden="true">Beta — Controlled access</p>
+          <h1 id="hero-heading">Safe, automated cloning workflows for labs and training</h1>
+          <p class="tag">
+            CloneLab provides validated protocols, sample tracking, and collaboration tools so teams can run reproducible cloning
+            experiments with confidence. Built with safety and auditability in mind.
+          </p>
+
+          <div class="ctas" role="region" aria-label="Primary actions">
+            <a class="btn btn-primary" href="#signup">Request access</a>
+            <a class="btn btn-outline" href="about.html">Learn more</a>
+          </div>
+
+          <div>
+            <div class="muted scroll-reveal"><h2>Trusted workflows</h2></div>
+            <div class="features scroll-reveal" aria-hidden="true">
+              <div class="card scroll-reveal">
+                <h3>Secure sample handling</h3>
+                <p class="muted">Chain-of-custody tracking, role-based permissions, and encrypted logs for audit-ready records.</p>
+              </div>
+              <div class="card scroll-reveal">
+                <h3>Automated protocols</h3>
+                <p class="muted">Standardized protocols you can run manually or integrate with lab automation platforms.</p>
+              </div>
+              <div class="card scroll-reveal">
+                <h3>Collaborative workspaces</h3>
+                <p class="muted">Share experiments, versions, and results securely with your team and supervisors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card scroll-reveal" aria-labelledby="signup">
+          <h2 id="signup">Request access</h2>
+          <p class="muted">Fill your details and we'll reach out with steps to join the pilot program.</p>
+
+          <form class="small-form scroll-reveal" id="access-form" action="mailto:info@example.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Full name" required>
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" placeholder="Work email" required>
+            <button type="submit">Request</button>
+          </form>
+
+          <p class="muted small">
+            By requesting access you agree to follow institutional and legal safety guidance. See <a href="about.html">About</a> for details.
+          </p>
+        </aside>
+      </section>
+
+      <section id="how" aria-labelledby="how-heading">
+        <h2 id="how-heading">How it works</h2>
+        <div class="split scroll-reveal" aria-hidden="true">
+          <div class="card">
+            <h3>1. Choose a protocol</h3>
+            <p class="muted">Select a vetted cloning protocol from the library or import your own. Each protocol includes the required reagents and steps.</p>
+          </div>
+          <div class="card">
+            <h3>2. Prepare & track</h3>
+            <p class="muted">Assign samples, print labeled tubes, and log metadata. Every sample update is recorded for traceability.</p>
+          </div>
+          <div class="card">
+            <h3>3. Run & report</h3>
+            <p class="muted">Execute the run (manual or automated), collect results, and generate a downloadable report with audit trails.</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="ethics-heading">
+        <h2 id="ethics-heading">Safety & ethics</h2>
+        <div class="card scroll-reveal">
+          <p class="muted">
+            CloneLab is intended for legitimate scientific and educational use within authorized environments. Users must comply
+            with institutional biosafety policies and applicable laws. Administrators can restrict features and enforce approvals.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <div class="card scroll-reveal">
+          <p class="muted">Questions about piloting CloneLab or integrating with lab robots? Email <a href="mailto:info@example.com">info@example.com</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-row">
+          <div>&copy; <span id="year"></span> CloneLab — Built for reproducible workflows</div>
+          <div>
+            <a href="about.html">About</a> &nbsp;·&nbsp;
+            <a href="#privacy">Privacy</a> &nbsp;·&nbsp;
+            <a href="#terms">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="index.js"></script>
   </body>
 </html>
