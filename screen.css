@@ -200,6 +200,10 @@ h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', sans-serif;
 }
 
+h2.mt-4 {
+  color:#000000
+}
+
 .tag {
      font-size: 1.5rem;
     margin-top: 1rem;
